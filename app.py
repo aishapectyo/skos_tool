@@ -144,31 +144,26 @@ html, body, [class*="css"] {
     border-radius: 2px;
     padding: 1.4rem 1.8rem;
     margin-bottom: 2rem;
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
 }
 .about-intro {
-    flex: 2;
-    min-width: 220px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #333333;
 }
 .about-intro p {
     font-size: 0.88rem;
     color: #707070;
     line-height: 1.8;
-    margin: 0 0 0.6rem;
+    margin: 0 0 0.5rem;
     font-style: italic;
 }
 .about-intro p:last-child { margin: 0; }
 .about-fields {
-    flex: 3;
-    min-width: 280px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem 2.5rem;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem 2rem;
 }
-.field-item { min-width: 180px; }
+.field-item {}
 .field-name {
     font-size: 0.7rem;
     font-weight: 700;
@@ -340,16 +335,11 @@ st.markdown("""
 st.markdown("""
 <div class="about-block">
     <div class="about-intro">
-        <p>
-            Enter a seed concept and this tool will look it up on Wikidata,
-            retrieve its preferred labels, alternate labels, and definitions
-            across your chosen languages, and map its broader and narrower
-            relationships using the SKOS standard.
-        </p>
-        <p>
-            The result is a ready-to-use Turtle (.ttl) file you can import
-            into a triplestore, catalog system, or any SKOS-compatible tool.
-        </p>
+        <p>Enter a seed concept and this tool will look it up on Wikidata, retrieve its preferred labels,
+        alternate labels, and definitions across your chosen languages, and map its broader and narrower
+        relationships using the SKOS standard.</p>
+        <p>The result is a ready-to-use Turtle (.ttl) file you can import into a triplestore,
+        catalog system, or any SKOS-compatible tool.</p>
     </div>
     <div class="about-fields">
         <div class="field-item">
